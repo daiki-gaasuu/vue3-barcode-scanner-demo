@@ -1,0 +1,9 @@
+{
+  "printWidth": 120,
+  "tabWidth": 2,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "arrowPanes": "always",
+  "vue/require-v-for-key": false,
+  "htmlWhitespaceSensitivity": "ignore"
+}
