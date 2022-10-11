@@ -2180,13 +2180,6 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vite-plugin-gh-pages@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-gh-pages/-/vite-plugin-gh-pages-0.4.0.tgz#854d1655c77e445852b203d627cce957909141fa"
-  integrity sha512-Kj2JnBwgxP0OjcFFWPkd64CmXIuY8H1cTB0Eemfj/1hOJ0BOHj1S1PUuaEy/nqy1TVxLzhTJnoS4OaZJCSXW2Q==
-  dependencies:
-    gh-pages "^4.0.0"
-
 vite-plugin-vuetify@^1.0.0-alpha.12:
   version "1.0.0-alpha.17"
   resolved "https://registry.yarnpkg.com/vite-plugin-vuetify/-/vite-plugin-vuetify-1.0.0-alpha.17.tgz#2205c85667757111ed7e8b24e0c7b01a421d7f63"
@@ -2261,10 +2254,10 @@ vue@^3.2.37:
     "@vue/server-renderer" "3.2.40"
     "@vue/shared" "3.2.40"
 
-"vuetify@npm:@vuetify/nightly@next":
-  version "3.0.0-next-20220928.0"
-  resolved "https://registry.yarnpkg.com/@vuetify/nightly/-/nightly-3.0.0-next-20220928.0.tgz#5406d49b196a2012fa6e78a9e1e9e53597030e6f"
-  integrity sha512-IOJ7XYsa9sD/++dW/g7kFfrpcHwOB1mtVhg7uW8iQJo9QT6jfKLzYeVKyVJN5YWTaD82O0iWeyMx4I0jTvxEIA==
+vuetify@@vuetify/nightly:
+  version "3.0.0-beta.13"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-3.0.0-beta.13.tgz#04af3a85b3852617da9bc50263f1128cd43e83fa"
+  integrity sha512-CgDyKCIBZ0ogKUxRw3gNswx9GA6eSSp7otZcJapWJCVuon/RooQPQjf3bDuRb5ZpJ55NkX13ugjl2nq+b0U8SA==
 
 webfontloader@^1.0.0:
   version "1.6.28"
