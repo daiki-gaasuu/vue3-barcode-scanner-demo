@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    aaa
+    <p>aaa</p>
     <!-- <h3>ISBNコード読み取りテスト</h3>
     <div id="test"></div>
     <v-card v-if="bookApiRes" class="mt-2" max-width="350">
