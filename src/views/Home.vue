@@ -15,9 +15,8 @@
 </template>
 <script lang="ts" setup>
 import Quagga from "@ericblade/quagga2";
-import { onMounted } from "vue-demi";
 import axios from "axios";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const bookApiRes: any = ref(null);
@@ -28,14 +27,14 @@ onMounted(() => {
         name: "Live",
         type: "LiveStream",
         constraints: {
+          // サイズ指定
           width: 360,
           height: 240,
         },
-        area: { top: "30%", right: "0%", left: "0%", bottom: "30%" },
         target: document.querySelector("#camera")!,
       },
       decoder: {
-        readers: ["ean_reader"],
+        readers: ["ean_reader"], //isbnコードは基本これらしい
       },
     },
     function (err) {
@@ -43,10 +42,12 @@ onMounted(() => {
         console.log(err);
         return;
       }
+      // エラーがなければ読み取り開始
       console.log("Initialization finished. Ready to start");
       Quagga.start();
     }
   );
+  // バーコードをデコードが完了したタイミングでの処理
   Quagga.onDetected((success) => {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const code = success.codeResult.code!;
@@ -87,25 +88,4 @@ onMounted(() => {
 });
 </script>
 
-<style lang="sass">
-#camera
-  position: relative
-  width: 360px
-  height: 240px
-  &::before
-    content: ""
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 30%
-    background: rgba(#000,0.5)
-  &::after
-    content: ""
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 100%
-    height: 30%
-    background: rgba(#000,0.5)
-</style>
+<style lang="sass"></style>
