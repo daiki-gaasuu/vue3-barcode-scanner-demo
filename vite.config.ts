@@ -3,11 +3,11 @@ import vue from "@vitejs/plugin-vue";
 import path from "path";
 // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
 import vuetify from "vite-plugin-vuetify";
-
+import { ghPages } from "vite-plugin-gh-pages";
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/vue3-barcode-scanner-demo/",
-  plugins: [vue(), vuetify({ autoImport: true })],
+  base: "./",
+  plugins: [vue(), vuetify({ autoImport: true }), ghPages()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

@@ -2180,6 +2180,13 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+vite-plugin-gh-pages@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-gh-pages/-/vite-plugin-gh-pages-0.4.0.tgz#854d1655c77e445852b203d627cce957909141fa"
+  integrity sha512-Kj2JnBwgxP0OjcFFWPkd64CmXIuY8H1cTB0Eemfj/1hOJ0BOHj1S1PUuaEy/nqy1TVxLzhTJnoS4OaZJCSXW2Q==
+  dependencies:
+    gh-pages "^4.0.0"
+
 vite-plugin-vuetify@^1.0.0-alpha.12:
   version "1.0.0-alpha.17"
   resolved "https://registry.yarnpkg.com/vite-plugin-vuetify/-/vite-plugin-vuetify-1.0.0-alpha.17.tgz#2205c85667757111ed7e8b24e0c7b01a421d7f63"
