@@ -6,7 +6,7 @@ import vuetify from "vite-plugin-vuetify";
 import { ghPages } from "vite-plugin-gh-pages";
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
+  base: process.env.NODE_ENV === "production" ? "/vue3-barcode-scanner-demo/" : "./",
   plugins: [vue(), vuetify({ autoImport: true }), ghPages()],
   resolve: {
     alias: {
