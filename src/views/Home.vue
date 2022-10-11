@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <h3>ISBNコード読み取りテスト</h3>
-    <div id="test"></div>
+    <h3>ISBNコードのバーコードを下記のカメラに合わせてください</h3>
+    <div id="camera"></div>
     <v-card v-if="bookApiRes" class="mt-2" max-width="350">
       <v-img height="250" :src="bookApiRes.cover"></v-img>
 
@@ -31,7 +31,8 @@ onMounted(() => {
           width: 360,
           height: 240,
         },
-        target: document.querySelector("#test")!,
+        area: { top: "30%", right: "0%", left: "0%", bottom: "30%" },
+        target: document.querySelector("#camera")!,
       },
       decoder: {
         readers: ["ean_reader"],
@@ -87,7 +88,24 @@ onMounted(() => {
 </script>
 
 <style lang="sass">
-#test
+#camera
+  position: relative
   width: 360px
   height: 240px
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 30%
+    background: rgba(#000,0.5)
+  &::after
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 30%
+    background: rgba(#000,0.5)
 </style>
